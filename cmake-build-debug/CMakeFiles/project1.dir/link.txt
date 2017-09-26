@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/project1.dir/main.c.o CMakeFiles/project1.dir/assign1/source/assign1part1.c.o CMakeFiles/project1.dir/assign1/source/test.c.o  -o project1 

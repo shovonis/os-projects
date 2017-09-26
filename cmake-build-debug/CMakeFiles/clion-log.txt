@@ -1,0 +1,15 @@
+/usr/local/clion-2017.2.1/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/rifatul/projects/os-projects/project1
+-- Configuring done
+CMake Error at CMakeLists.txt:7 (add_executable):
+  Cannot find source file:
+
+    assign1/source/test.c
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .m .M .mm .h .hh .h++ .hm .hpp
+  .hxx .in .txx
+
+
+CMake Error: CMake can not determine linker language for target: project1
+CMake Error: Cannot determine link language for target "project1".
+-- Generating done
+-- Build files have been written to: /home/rifatul/projects/os-projects/project1/cmake-build-debug
