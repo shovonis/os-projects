@@ -42,7 +42,7 @@ int main(int argc, char *argv[]) {
     while (read(fileInput, &virtualAddress, sizeof(unsigned long)) == sizeof(unsigned long)) {
 //        printf("Virtual Address is 0x%lx\n", virtualAddress);
         offset = virtualAddress & 127; // total size of the virtual page is 128 byte
-        printf("offset: %lx\n", offset);
+//        printf("offset: %lx\n", offset);
 
         virtualAddress = virtualAddress >> offsetBit;
         error = convertPageToFrame(virtualAddress, &frame);

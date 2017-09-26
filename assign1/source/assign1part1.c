@@ -35,9 +35,9 @@ int main(int argc, char *argv[]) {
     }
 
     while (read(fileInput, &virtualAddress, sizeof(unsigned long)) == sizeof(unsigned long)) {
-        printf("Virtual Address is 0x%lx\n", virtualAddress);
+//        printf("Virtual Address is 0x%lx\n", virtualAddress);
         offset = virtualAddress & 127; // total size of the virtual page is 128 byte
-        printf("offset: %lx\n", offset);
+//        printf("offset: %lx\n", offset);
 
         unsigned long pageTableIndex = virtualAddress >> offsetBit; //Bitwise right shift to get the page index
         frame = pageTable[pageTableIndex];
@@ -45,8 +45,8 @@ int main(int argc, char *argv[]) {
         physicalAddress = frame << offsetBit; // Bitwise left shift to get the physical base address
         physicalAddress = physicalAddress + offset;
 
-        printf("Frame is: %ld and Virtual index is: %ld, Physical Address: 0x%lX\n", frame, pageTableIndex,
-               physicalAddress);
+//        printf("Frame is: %ld and Virtual index is: %ld, Physical Address: 0x%lX\n", frame, pageTableIndex,
+//               physicalAddress);
 
         write(fileOutput, &physicalAddress, sizeof(unsigned long));
     }
